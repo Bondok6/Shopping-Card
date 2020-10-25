@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ShoppingCard from './shopping_card';
+
 
 class Product extends Component{
 
@@ -15,7 +15,7 @@ class Product extends Component{
     
     return (
       <div className="row container">
-        <div className="col-2 ">
+        <div className="col-3">
           <h4>{this.props.product.name}</h4>
         </div>
         <div className="col">
