@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Product from './components/product';
-
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+import ShoppingCard from './components/shopping_card';
 
 
-ReactDOM.render(<Product/>, document.getElementById('root'));
+ReactDOM.render(<ShoppingCard/>, document.getElementById('root'));
  
