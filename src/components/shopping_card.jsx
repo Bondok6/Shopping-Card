@@ -49,11 +49,11 @@ class ShoppingCard extends Component {
     return (
       <div className="container">
 
-        <h1>Shopping Card</h1>
+        <h1>Shopping Card</h1> <hr/>
         
         <button className="btn btn-secondary"
                 onClick={this.resetCount}> Reset
-        </button>
+        </button> <br/> <br/> 
 
 
         {this.state.products.map((prod) => {
