@@ -16,7 +16,7 @@ class Product extends Component{
     return (
       <div className="row container">
         <div className="col-2 ">
-          <span>{this.props.product.name}</span>
+          <h4>{this.props.product.name}</h4>
         </div>
         <div className="col">
           

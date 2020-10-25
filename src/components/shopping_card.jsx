@@ -51,8 +51,10 @@ class ShoppingCard extends Component {
 
         <h1>Shopping Card</h1> <hr/>
         
-        <button className="btn btn-secondary"
-                onClick={this.resetCount}> Reset
+        <button
+          className="btn btn-secondary"
+          onClick={this.resetCount}>
+          Reset
         </button> <br/> <br/> 
 
 
