@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
+import { Route , Switch } from 'react-router-dom'
+
 import Navbar from './navbar'
 import ShoppingCard from './shopping_card'
+import Home from './home';
+import About from './about';
+import Contact from './contact';
+import ProductDetail from './product_details';
+
 
 class App extends Component {
   state = {
@@ -50,13 +57,27 @@ class App extends Component {
 
         <Navbar productsNumber={this.state.products.filter((p)=> p.count > 0).length} />
         
-        <ShoppingCard
-          products={this.state.products}
-          onDelete={this.deleteProduct}
-          onReset={this.resetCount}
-          onIncrement={this.incCount}
-          onDecrement={this.decCount}
-        />
+
+
+        
+        <Switch>
+            <Route path="/product/:id/:name?" component={ProductDetail}/>
+            <Route path="/about" component={About}/>
+            <Route path="/contact" component={Contact} />
+            <Route path="/cart" render={(props) => (
+                    <ShoppingCard
+                    products={this.state.products}
+                    onDelete={this.deleteProduct}
+                    onReset={this.resetCount}
+                    onIncrement={this.incCount}
+                    onDecrement={this.decCount}
+                    {...props}
+                  />
+             )}/>
+            
+            <Route path="/" component={Home}/>
+          </Switch>
+        
         
       </React.Fragment>
     )
