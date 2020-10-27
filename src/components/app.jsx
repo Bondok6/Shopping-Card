@@ -48,7 +48,8 @@ class App extends Component {
     return (
       <React.Fragment>
 
-        <Navbar productsNumber ={this.state.products.filter((p)=> p.count > 0).length} />
+        <Navbar productsNumber={this.state.products.filter((p)=> p.count > 0).length} />
+        
         <ShoppingCard
           products={this.state.products}
           onDelete={this.deleteProduct}
