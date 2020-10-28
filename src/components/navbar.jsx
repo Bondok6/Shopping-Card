@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import ShoppingCard from './shopping_card';
 
 const Navbar = (props) => {
   return(
@@ -14,7 +15,7 @@ const Navbar = (props) => {
             </li>
 
             <li className="nav-item active">
-              <Link className="nav-link" to="/cart">Cart </Link>
+              <Link className="nav-link" to="/cart">Shopping Card</Link>
             </li>
 
             <li className="nav-item">

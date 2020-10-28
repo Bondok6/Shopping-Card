@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route , Switch } from 'react-router-dom'
+import { Route , Switch, Redirect } from 'react-router-dom'
 
 import Navbar from './navbar'
 import ShoppingCard from './shopping_card'
@@ -7,7 +7,7 @@ import Home from './home';
 import About from './about';
 import Contact from './contact';
 import ProductDetail from './product_details';
-
+import Error from './error';
 
 class App extends Component {
   state = {
@@ -83,7 +83,11 @@ class App extends Component {
                   />
              )}/>
             
-            <Route path="/" component={Home}/>
+            <Route path="/" exact component={Home}/>
+            <Route path="/error" component={Error}/>
+            
+            <Redirect from="/home" to="/"/>
+            <Redirect to="/error"/>
           </Switch>
         
         

@@ -1,0 +1,7 @@
+npx create-react app first-app
+
+npm install --save react-router-dom
+
+npm install bootstrap
+
+npm install query-string
