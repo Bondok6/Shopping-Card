@@ -61,17 +61,25 @@ class App extends Component {
 
         
         <Switch>
-            <Route path="/product/:id/:name?" component={ProductDetail}/>
-            <Route path="/about" component={About}/>
-            <Route path="/contact" component={Contact} />
+          <Route path="/product/:id/:name?" render={(props) => (
+            <ProductDetail
+              products={this.state.products}
+              {...props}
+            />
+          )} />  
+          
+           <Route path="/about" component={About} />
+          
+           <Route path="/contact" component={Contact} />
+          
             <Route path="/cart" render={(props) => (
                     <ShoppingCard
-                    products={this.state.products}
-                    onDelete={this.deleteProduct}
-                    onReset={this.resetCount}
-                    onIncrement={this.incCount}
-                    onDecrement={this.decCount}
-                    {...props}
+                      products={this.state.products}
+                      onDelete={this.deleteProduct}
+                      onReset={this.resetCount}
+                      onIncrement={this.incCount}
+                      onDecrement={this.decCount}
+                      {...props}
                   />
              )}/>
             

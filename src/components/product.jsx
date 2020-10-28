@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 
 
 const Product = (props) => {
@@ -11,7 +11,11 @@ const Product = (props) => {
   return (
     <div className="row container">
       <div className="col-3">
-        <h4>{props.product.name}</h4>
+        <h4>
+          <Link to={`/product/${props.product.id}`}>
+            {props.product.name}
+          </Link>
+        </h4>
       </div>
       <div className="col">
         
