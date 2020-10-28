@@ -1,7 +1,12 @@
 npx create-react app first-app
 
+npm install react react-dom
+
 npm install --save react-router-dom
 
 npm install bootstrap
 
+component install FortAwesome/Font-Awesome
+
 npm install query-string
+
