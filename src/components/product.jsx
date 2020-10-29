@@ -29,7 +29,7 @@ const Product = (props) => {
           onClick={()=> props.onDecrement(props.product)}>
           -</button>
 
-        <span onClick={()=> props.onDelete(props.product)}>
+        <span style={{cursor:"pointer"}} onClick={()=> props.onDelete(props.product)}>
           <i className="fas fa-trash m-2"></i>
         </span>
 

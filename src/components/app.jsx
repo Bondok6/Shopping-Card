@@ -83,10 +83,10 @@ class App extends Component {
                   />
              )}/>
             
-            <Route path="/" exact component={Home}/>
+            <Route path="/home" exact component={Home}/>
             <Route path="/error" component={Error}/>
             
-            <Redirect from="/home" to="/"/>
+            <Redirect from="/" to="/home"/>
             <Redirect to="/error"/>
           </Switch>
         
