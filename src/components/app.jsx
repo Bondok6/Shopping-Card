@@ -8,6 +8,7 @@ import About from './about';
 import Contact from './contact';
 import ProductDetail from './product_details';
 import Error from './error';
+import Menu from './menu';
 
 class App extends Component {
   state = {
@@ -83,6 +84,7 @@ class App extends Component {
                   />
              )}/>
             
+            <Route path="/menu" component={Menu}/>
             <Route path="/home" exact component={Home}/>
             <Route path="/error" component={Error}/>
             
