@@ -5,7 +5,6 @@ import Navbar from './navbar'
 import ShoppingCard from './shopping_card'
 import Home from './home';
 import About from './about';
-import Contact from './contact';
 import ProductDetail from './product_details';
 import Error from './error';
 import Menu from './menu';
@@ -71,7 +70,7 @@ class App extends Component {
           
            <Route path="/about" component={About} />
           
-           <Route path="/contact" component={Contact} />
+          
           
             <Route path="/cart" render={(props) => (
                     <ShoppingCard
